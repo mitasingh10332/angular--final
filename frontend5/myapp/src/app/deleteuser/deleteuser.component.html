@@ -1,0 +1,14 @@
+<br>
+<form #f2="ngForm"(ngSubmit)="removeUser(f2.value)">
+    id<input name="_id" ngModel><br>
+    <button >delete</button>
+</form>
+
+<div *ngIf="result else t1">
+    {{result}} <br>
+    this record id deleted<br>
+</div>
+
+<ng-template #t1>
+    try again
+</ng-template>

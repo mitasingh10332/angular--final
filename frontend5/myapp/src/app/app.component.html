@@ -1,0 +1,21 @@
+<a routerLink="">Home</a>|
+<a routerLink="adduser">add user</a>|
+<a routerLink="showuser">Show user</a>|
+<a routerLink="edituser">edit user</a>|
+<a routerLink="deleteuser">delete user</a>|
+
+
+<router-outlet></router-outlet>
+
+<br>
+<form #f4="ngForm" (ngSubmit)="search(f4.value)">
+    <input name="_id" placeholder="Enter Id" ngModel>
+    <button>search</button>
+</form>
+
+<div>
+  id: {{result._id}}<br>
+  name:{{result.name}}<br>
+  pass:{{result.password}}<br>
+  role:{{result.role}}<br>
+</div>
